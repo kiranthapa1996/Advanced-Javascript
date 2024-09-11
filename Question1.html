@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+<script>
+    function Person(name, age) {
+        this.name = name;
+        this.age = age;
+
+        this.sayHello = function () {
+            console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+        };
+    }
+
+    // Example usage
+    const person1 = new Person("Kiran", 28);
+    person1.sayHello(); 
+</script>
+
+</html>

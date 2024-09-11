@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+<script>
+    class Shape {
+        draw() {
+            console.log("Drawing a shape");
+        }
+    }
+
+    class Circle extends Shape {
+        draw() {
+            console.log("Drawing a circle");
+        }
+    }
+
+    class Rectangle extends Shape {
+        draw() {
+            console.log("Drawing a rectangle");
+        }
+    }
+
+    function drawShape(shape) {
+        shape.draw();
+    }
+
+    const myCircle = new Circle();
+    const myRectangle = new Rectangle();
+
+    drawShape(myCircle);
+    drawShape(myRectangle);
+
+</script>
+
+</html>

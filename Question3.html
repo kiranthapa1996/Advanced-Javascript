@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const Calculator = {
+    value: 0,
+
+    setValue: function(num) {
+        this.value = num;
+        return this; 
+    },
+
+    add: function(num) {
+        this.value += num;
+        return this; 
+    },
+
+    subtract: function(num) {
+        this.value -= num;
+        return this;
+    },
+
+    multiply: function(num) {
+        this.value *= num;
+        return this; 
+    },
+
+    divide: function(num) {
+        if (num !== 0) {
+            this.value /= num;
+        } else {
+            console.error("Error: Division by zero");
+        }
+        return this; 
+    },
+
+    getResult: function() {
+        return this.value;
+    }
+};
+
+const result = Calculator.setValue(10)
+                        .add(5)
+                        .subtract(3)
+                        .multiply(4)
+                        .divide(2)
+                        .getResult();
+
+console.log(result);
+</script>
+
+</html>

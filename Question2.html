@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    // Person constructor
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+
+    this.sayHello = function() {
+        console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+    };
+}
+
+function Employee(name, age, designation) {
+    Person.call(this, name, age);
+    
+    this.designation = designation;
+
+    this.getDetails = function() {
+        console.log(`Name: ${this.name}, Age: ${this.age}, Designation: ${this.designation}`);
+    };
+}
+
+const employee1 = new Employee("Kiran", 28, "BCA Student");
+employee1.sayHello(); 
+employee1.getDetails(); 
+
+</script>
+</html>

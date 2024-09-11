@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+<script>
+    if (!Array.prototype.customIncludes) {
+        Array.prototype.customIncludes = function (valueToFind, fromIndex = 0) {
+
+            let start = fromIndex < 0 ? this.length + fromIndex : fromIndex;
+
+            for (let i = start; i < this.length; i++) {
+                if (this[i] === valueToFind) {
+                    return true;
+                }
+            }
+            return false;
+        };
+    }
+
+    const arr = [1, 2, 3, 4, 5];
+
+    console.log(arr.customIncludes(3));
+    console.log(arr.customIncludes(6));
+    console.log(arr.customIncludes(2, 2));
+    console.log(arr.customIncludes(5, -1));
+</script>
+
+</html>
